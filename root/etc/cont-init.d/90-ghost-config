@@ -23,11 +23,9 @@ chown -R abc:abc \
 apt-get update && apt-get install -y unzip
 
 # install the trakt plugin
-wget https://github.com/trakt/Plex-Trakt-Scrobbler/archive/master.zip -O Plex-Trakt-Scrobbler.zip && \
-unzip Plex-Trakt-Scrobbler.zip && \
-mkdir -p "/config/Library/Application Support/Plex Media Server/Plug-ins/" && \
-cp -r Plex-Trakt-Scrobbler-*/Trakttv.bundle "/config/Library/Application Support/Plex Media Server/Plug-ins/Trakttv.bundle" && \
-rm Plex-Trakt-Scrobbler.zip
+wget https://github.com/pannal/Sub-Zero.bundle/releases/download/2.6.5.3109/Sub-Zero.bundle-2.6.5.3109.zip && \
+unzip Sub-Zero.bundle-2.6.5.3109.zip -d "/config/Library/Application Support/Plex Media Server/Plug-ins/" && \
+rm Sub-Zero.bundle-2.6.5.3109.zip
 
 # allow all users to access GPU for hardware acceleration
 chmod -R 777 /dev/dri
